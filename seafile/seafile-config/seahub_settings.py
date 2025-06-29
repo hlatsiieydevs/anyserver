@@ -9,8 +9,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'seahub_db',
-        'USER': 'USERNAME',
-        'PASSWORD': 'PASSWORD',
+        'USER': 'USERNAME', # Your MySQL username should be here. NOTE: It is handled by (.env)
+        'PASSWORD': 'PASSWORD', # Your MySQL password should be here. NOTE: It is handled by (.env)
         'HOST': 'db',
         'PORT': '3306',
         'OPTIONS': {'charset': 'utf8mb4'},
@@ -29,7 +29,7 @@ CACHES = {
 COMPRESS_CACHE_BACKEND = 'locmem'
 
 # The environment file should handle these variables. 
-TIME_ZONE = 'Africa/Johannesburg' # The selected time zone should be displayed
+TIME_ZONE = 'Etc/UTC' # The selected time zone should be displayed
 FILE_SERVER_ROOT = 'https://DOMAINNAME.COM/seafhttp' # The hostname you entered should be displayed
 
 # ****************The only change that should be applied is the addition of the line below*********************
