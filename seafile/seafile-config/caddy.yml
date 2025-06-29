@@ -6,11 +6,11 @@ services:
     container_name: seafile-caddy
     ports:
       - 80:80
-      # - 443:443
+      # - 443:443  # this has been disabled to prevent HTTPS redirect, cloudflared handles it
     environment:
       - CADDY_INGRESS_NETWORKS=seafile-net
       - CADDY_DOCKER_PROXY_UPSTREAM=http://seafile:80 # Force HTTP upstream
-      - CADDY_DOCKER_PROXY_HEADER_X-Forwarded-Proto=https
+      - CADDY_DOCKER_PROXY_HEADER_X-Forwarded-Proto=https 
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - ${SEAFILE_CADDY_VOLUME:-/opt/seafile-caddy}:/data/caddy
