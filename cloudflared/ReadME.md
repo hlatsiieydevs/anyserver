@@ -10,7 +10,7 @@ To set up this service to work, we need to do three key things:
 
 
 
-## Installing Cloudflared on Ubunutu via CLI
+## Installing Cloudflared on Ubuntu via CLI
 ### 1. Add Cloudflare's GPG keys
 ```bash
 sudo mkdir -p --mode=0755 /usr/share/keyrings
