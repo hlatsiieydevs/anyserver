@@ -4,7 +4,7 @@ services:
     container_name: cloudflared
     command: tunnel --config /etc/cloudflared/config.yml run
     volumes:
-      - /root/.cloudflared:/etc/cloudflared
+      - ${CLOUDFLARED_CONFIG_FILE_PATH}:/etc/cloudflared
     networks:
       - seafile-net
     restart: unless-stopped
