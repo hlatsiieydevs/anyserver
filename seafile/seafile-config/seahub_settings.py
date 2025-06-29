@@ -9,8 +9,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'seahub_db',
-        'USER': 'hlatsiiey',
-        'PASSWORD': '06237',
+        'USER': 'USERNAME',
+        'PASSWORD': 'PASSWORD',
         'HOST': 'db',
         'PORT': '3306',
         'OPTIONS': {'charset': 'utf8mb4'},
