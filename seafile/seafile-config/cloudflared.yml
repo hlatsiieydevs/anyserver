@@ -4,7 +4,6 @@ services:
     container_name: cloudflared
     command: tunnel --config /etc/cloudflared/config.yml run
     volumes:
-      # - /root/.cloudflared/config.yml:/etc/cloudflared/config.yml
       - /root/.cloudflared:/etc/cloudflared
     networks:
       - seafile-net
